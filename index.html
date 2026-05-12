@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特例失踪者等公開アーカイブ | ヨミガタリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="vhs-overlay"></div>
+
+    <header>
+        <h1 id="main-title">特例失踪者等公開アーカイブ</h1>
+        <div class="admin-info">厚生労働省 特例事象対策班（管轄：不詳） / 管理番号：YMGTR-81-09</div>
+    </header>
+
+    <div class="container">
+        <div class="warning-banner">
+            【重要】アーカイブ内の画像・情報を3秒以上凝視しないでください。
+        </div>
+
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="検索ワードを入力（氏名、地域、事象分類...）">
+        </div>
+
+        <div class="case-list">
+            <!-- ケース1 -->
+            <div class="case-row" onclick="openCase('case1')">
+                <div class="case-thumb">
+                    <img src="case1.png" alt="IMAGE NOT FOUND">
+                </div>
+                <div class="case-info">
+                    <div class="case-status">分類：A型（物理消失）</div>
+                    <h3>佐藤 結衣（17）</h3>
+                    <div class="case-meta">202X年08月15日 / ◯◯県 鏡ヶ池周辺</div>
+                </div>
+            </div>
+
+            <!-- ケース2 -->
+            <div class="case-row" onclick="openCase('case2')">
+                <div class="case-thumb">
+                    <img src="case2.png" alt="NO DATA">
+                </div>
+                <div class="case-info">
+                    <div class="case-status">分類：特甲（神隠し）</div>
+                    <h3>進藤　茂</h3>
+                    <div class="case-meta">昭和52年04月09日 / ■■県　小学校の帰宅路</div>
+                </div>
+            </div>
+
+            <!-- ケース3 -->
+            <div class="case-row" onclick="openCase('case3')">
+                <div class="case-thumb">
+                    <img src="case3.png" alt="HISTORICAL">
+                </div>
+                <div class="case-info">
+                    <div class="case-status">分類：特乙（連鎖消失）</div>
+                    <h3>「奉納船」集団失踪事件</h3>
+                    <div class="case-meta">昭和19年11月 / 某県沿岸部</div>
+                </div>
+            </div>
+
+            <!-- ケース4 -->
+            <div class="case-row" onclick="openCase('case4')">
+                <div class="case-thumb">
+                    <img src="case4.png" alt="RESTRICTED">
+                </div>
+                <div class="case-info">
+                    <div class="case-status">分類：B型（認識災害）</div>
+                    <h3>高橋 健一（31）</h3>
+                    <div class="case-meta">2025年02月10日 / 自宅マンション</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダル -->
+    <div id="case-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeCase()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- アビス画面 -->
+    <div id="abyss">
+        <div>
+            <h1 id="abyss-title">み つ け た</h1>
+            <p style="color: #333;">次は、あなたの番です。</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 公益財団法人 ヨミガタリ管理委員会</p>
+        <p class="hidden-text">※私たちは、あなたがこれを見ていることを知っています。</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
